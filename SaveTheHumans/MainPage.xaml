@@ -43,7 +43,7 @@
         </Grid.RowDefinitions>
 
         <!-- Back button and page title -->
-        <Grid x:Name="grid" Grid.ColumnSpan="4" PointerMoved="grid_PointerMoved" PointerExited="grid_PointerExited">
+        <Grid x:Name="grid" Grid.ColumnSpan="4" PointerMoved="playArea_PointerMoved" PointerExited="playArea_PointerExited">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="120"/>
                 <ColumnDefinition Width="*"/>
@@ -63,7 +63,7 @@
             <ContentControl Content="ContentControl" RenderTransformOrigin="0.079,2.087" HorizontalAlignment="Center" VerticalAlignment="Center" Template="{StaticResource EnemyTemplate}"/>
         </StackPanel>
         <ProgressBar x:Name="progressBar" Grid.Column="1" Grid.Row="2" Height="20"/>
-        <Canvas x:Name="playArea" Grid.Row="1" Grid.ColumnSpan="3">
+        <Canvas x:Name="playArea" Grid.Row="1" Grid.ColumnSpan="3" PointerExited="playArea_PointerExited" PointerMoved="playArea_PointerMoved">
             <Canvas.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>
